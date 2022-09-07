@@ -152,6 +152,24 @@ class TicTacToeTest {
         assertEquals(message, ticTacToe.playerTurn());
     }
 
+    @Test
+    public void
+    should_be_player_0_after_player_X_turn() {
+        ticTacToe.play("X",0);
+        String message = "Player 0's turn";
+        assertEquals(message, ticTacToe.playerTurn());
+    }
+
+    @Test
+    public void
+    should_players_alternate_placing() {
+        ticTacToe.play("X",0);
+        ticTacToe.play("0",1);
+        ticTacToe.play("X",2);
+        String message = "Player 0's turn";
+        assertEquals(message, ticTacToe.playerTurn());
+    }
+
 
 
 

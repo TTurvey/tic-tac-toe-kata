@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class TicTacToe {
 
     private String[] gridArray;
@@ -10,8 +8,9 @@ public class TicTacToe {
         this.playerTurn = "X";
     }
 
-    public String[] play(String x, int i) {
-        gridArray[i] = x;
+    public String[] play(String symbol, int i) {
+        gridArray[i] = symbol;
+        changePlayerTurn(symbol);
         return gridArray;
     }
 
@@ -33,6 +32,15 @@ public class TicTacToe {
 
     public String playerTurn() {
         return "Player " + playerTurn + "'s turn";
+    }
+
+    public void changePlayerTurn(String symbol) {
+        if (symbol == "X") {
+            playerTurn = "0";
+        }
+        if (symbol == "0") {
+            playerTurn = "X";
+        }
     }
 }
 
