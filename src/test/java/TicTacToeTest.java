@@ -154,6 +154,13 @@ class TicTacToeTest {
 
     @Test
     public void
+    should_return_error_if_player_0_goes_first() {
+        String message = "Error: Player X goes first";
+        assertEquals(message, ticTacToe.checkFirstTurnPlayer("0"));
+    }
+
+    @Test
+    public void
     should_be_player_0_after_player_X_turn() {
         ticTacToe.play("X",0);
         String message = "Player 0's turn";

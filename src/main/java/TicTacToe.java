@@ -2,16 +2,27 @@ public class TicTacToe {
 
     private String[] gridArray;
     private String playerTurn;
+    private int turnNumber;
 
     public TicTacToe() {
         this.gridArray = new String[]{".", ".", ".", ".", ".", ".", ".", ".", "."};
         this.playerTurn = "X";
+        this.turnNumber = 1;
     }
 
     public String[] play(String symbol, int i) {
+        checkFirstTurnPlayer(symbol);
         gridArray[i] = symbol;
         changePlayerTurn(symbol);
+        turnNumber += 1;
         return gridArray;
+    }
+
+    public String checkFirstTurnPlayer(String symbol) {
+        if(turnNumber == 1 && symbol.equals("0")){
+            return "Error: Player X goes first";
+        }
+        return null;
     }
 
     public String checkGame() {
@@ -35,10 +46,10 @@ public class TicTacToe {
     }
 
     public void changePlayerTurn(String symbol) {
-        if (symbol == "X") {
+        if (symbol.equals("X")) {
             playerTurn = "0";
         }
-        if (symbol == "0") {
+        if (symbol.equals("0")) {
             playerTurn = "X";
         }
     }
