@@ -11,7 +11,7 @@ class TicTacToeTest {
     should_return_position_zero() {
         String[] expectedOutput = {"X", ".", ".", ".", ".", ".", ".", ".", "."};
         String[] output = new TicTacToe().play("X", 0 );
-        assertTrue( Arrays.equals(expectedOutput, output ));
+        assertArrayEquals(expectedOutput, output);
     }
 
     @Test
@@ -19,7 +19,7 @@ class TicTacToeTest {
     should_return_position_one() {
         String[] expectedOutput = {".", "O", ".", ".", ".", ".", ".", ".", "."};
         String[] output = new TicTacToe().play("O", 1 );
-        assertTrue( Arrays.equals(expectedOutput, output ));
+        assertArrayEquals(expectedOutput, output);
     }
 
 }
