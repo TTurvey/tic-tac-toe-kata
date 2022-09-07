@@ -15,7 +15,7 @@ public class TicTacToe {
     }
 
     public String checkGame() {
-        int[][] winingPositions = {{0,1,2}, {3,4,5}, {6,7,8}};
+        int[][] winingPositions = {{0,1,2}, {3,4,5}, {6,7,8}, {0,3,6}};
 
         for (int i = 0; i < winingPositions.length; i++) {
             if ( gridArray[winingPositions[i][0]].equals("X") && gridArray[winingPositions[i][1]].equals("X") && gridArray[winingPositions[i][2]].equals("X") ) {
