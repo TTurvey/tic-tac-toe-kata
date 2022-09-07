@@ -12,7 +12,9 @@ public class TicTacToe {
 
     public String[] play(String symbol, int i) {
         checkFirstTurnPlayer(symbol);
-        gridArray[i] = symbol;
+        if (playerTurn == symbol) {
+            gridArray[i] = symbol;
+        }
         changePlayerTurn(symbol);
         turnNumber += 1;
         return gridArray;
