@@ -30,4 +30,12 @@ class TicTacToeTest {
         assertArrayEquals(expectedOutput, output);
     }
 
+    @Test
+    public void
+    should_return_0_at_position_zero() {
+        String[] expectedOutput = {".", ".", "0", ".", ".", ".", ".", ".", "."};
+        String[] output = new TicTacToe().play("0", 2 );
+        assertArrayEquals(expectedOutput, output);
+    }
+
 }
