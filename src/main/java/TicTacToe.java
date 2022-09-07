@@ -3,14 +3,15 @@ import java.util.Arrays;
 public class TicTacToe {
 
     private String[] gridArray;
+    private String playerTurn;
 
     public TicTacToe() {
         this.gridArray = new String[]{".", ".", ".", ".", ".", ".", ".", ".", "."};
+        this.playerTurn = "X";
     }
 
     public String[] play(String x, int i) {
         gridArray[i] = x;
-        System.out.println(Arrays.toString(gridArray));
         return gridArray;
     }
 
@@ -28,6 +29,10 @@ public class TicTacToe {
 
         return "Game still being played";
 
+    }
+
+    public String playerTurn() {
+        return "Player " + playerTurn + "'s turn";
     }
 }
 

@@ -145,4 +145,14 @@ class TicTacToeTest {
         assertEquals(result, ticTacToe.checkGame());
     }
 
+    @Test
+    public void
+    should_be_player_X_turn_at_start() {
+        String message = "Player X's turn";
+        assertEquals(message, ticTacToe.playerTurn());
+    }
+
+
+
+
 }
